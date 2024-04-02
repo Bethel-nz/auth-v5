@@ -3,8 +3,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import googleAuthAction from '@/actions/google-auth-action';
 
-import { Separator } from '@/components/ui/separator';
-
 const GoogleAuthButton = () => {
   return (
     <form action={googleAuthAction}>
