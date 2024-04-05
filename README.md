@@ -6,19 +6,19 @@
 
 ```bash
 
-bunx create-next-app --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+bunx create-next-app --example https://github.com/Bethel-nz/auth-v5 my-example-app
 
 #or
 
-yarn create-next-app --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+yarn create-next-app --example https://github.com/Bethel-nz/auth-v5 my-example-app
 
 #or
 
-npx create-next-app@latest --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+npx create-next-app@latest --example https://github.com/Bethel-nz/auth-v5 my-example-app
 
 #or
 
-pnpm create-next-app --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+pnpm create-next-app --example https://github.com/Bethel-nz/auth-v5 my-example-app
 ```
 
 <br/>
