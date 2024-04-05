@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# About
+
+- This is a [`Next.js`](https://nextjs.org/) template bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [`Auth.js`](https://authjs.dev)
+
+## Usage
+
+```bash
+
+bunx create-next-app --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+
+#or
+
+yarn create-next-app --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+
+#or
+
+npx create-next-app@latest --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+
+#or
+
+pnpm create-next-app --example https://github.com/Bethel-nz/auth-v5 track-my-subs
+```
+
+<br/>
 
 ## Getting Started
 
-First, run the development server:
+- By default this template uses prisma adapter
+  - remember to set your `DATABASE_URL` in the env file
+- make a `.env` file or `.env.local` file
+- add your necessary client keys and id or your providers accessing keys and values
+- prefix them with `Auth_` and then the id
+
+```
+AUTH_EXAMPLE_PROVIDER_ID = value goes here
+AUTH_EXAMPLE_PROVIDER_SECRET = value goes here
+```
+
+- check if auth.js supports your provider - [Auth.js providers](https://authjs.dev/getting-started/providers)
+- add your provider to the `auth.config.ts` file in config dir
+- next auth v5 will pick up provider secret and id
+- don't forget to generate your secret and add it to the `.env` files
+- cross reference the `.env.example` file - [here](./.env.example)
+
+  <br/>
+
+## Run the development server:
 
 ```bash
+
 npm run dev
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
+
 # or
+
 bun dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about this template, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Auth.js Documentation](https://authjs.dev/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Auth-v5 GitHub repository](https://github.com/Bethel-nz/auth-v5) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+~ This project uses:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/docs)
+- [Auth.js](https://authjs.dev)
+- [Prisma](https://prisma.io/docs/getting-started)
+- [Shadcn-ui](https://ui.shadcn.com)

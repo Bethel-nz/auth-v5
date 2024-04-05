@@ -1,6 +1,6 @@
 'use client';
 
-import signIn from '@/actions/sign-in';
+import signIn from '@/actions/auth/sign-in';
 import { loginFormSchema } from '@/types/index';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';

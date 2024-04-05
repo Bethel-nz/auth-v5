@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import googleAuthAction from '@/actions/google-auth-action';
+import googleAuthAction from '@/actions/auth/google-auth-action';
 
 const GoogleAuthButton = () => {
   return (
