@@ -1,11 +1,19 @@
+'use server';
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import googleAuthAction from '@/actions/auth/google-auth-action';
+import { signIn } from 'auth';
 
-const GoogleAuthButton = () => {
+const GoogleAuthButton = ({ provider }: { provider: string }) => {
+  async function AuthAction(provider: string) {
+    await signIn(provider, {
+      redirect: true,
+      redirectTo: `/`,
+    });
+  }
+
   return (
-    <form action={googleAuthAction}>
+    <form action={() => AuthAction(provider)}>
       <Button className='flex w-full gap-4'>
         <Image
           src={'/google-icon.png'}

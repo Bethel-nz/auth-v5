@@ -19,9 +19,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
-import GoogleAuthButton from './google-auth-button';
+import GoogleAuthButton from './auth-button';
 import Link from 'next/link';
 import InvalidCredentialsError from '@/lib/error.auth';
+import AuthButton from './auth-button';
 
 export default function LoginForm() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -124,7 +125,7 @@ export default function LoginForm() {
       </div>
       <Separator />
       <div className='mt-4'>
-        <GoogleAuthButton />
+        <AuthButton provider='google' />
       </div>
     </div>
   );
